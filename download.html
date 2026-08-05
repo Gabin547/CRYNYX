@@ -33,18 +33,55 @@
             <div class="download-item">
                 <span class="name">Windows (x64) - crynyx.exe</span>
                 <span class="size">~68 Ko</span>
-                <a href="download/crynyx.zip" class="btn-small">Télécharger</a>
+                <a href="downloads/crynyx.zip" class="btn-small">Télécharger (.zip)</a>
             </div>
 
+        </div>
+
+        <!-- SECTION SÉCURITÉ - IMPORTANTE ! -->
+        <div class="warning-box">
+            <h3 style="color:#ff4444; margin-top:0;">Avertissement Windows Defender / SmartScreen</h3>
+            <p style="color:#ff4444;">
+                Lorsque vous lancez CRYNYX, Windows peut afficher un message :
+                <strong>"Windows protected your PC"</strong> ou <strong>"Virus detected"</strong>.
+            </p>
+            <p style="color:#ff4444;">
+                <strong>Ce message est normal.</strong> Il apparaît parce que CRYNYX est un logiciel <strong>non signé numériquement</strong> et encore <strong>peu connu</strong> de Microsoft.
+                CRYNYX n'est <strong>pas un virus</strong>. Le code source est entièrement visible sur GitHub.
+            </p>
+
+            <h3 style="color:#ff4444; margin-top:25px;">Comment lancer CRYNYX</h3>
+            <ol style="color:#ff4444; padding-left:20px;">
+                <li><strong>Téléchargez</strong> le fichier crynyx.zip</li>
+                <li><strong>Extrayez</strong> le fichier crynyx.exe du dossier zip</li>
+                <li><strong>Double-cliquez</strong> sur crynyx.exe</li>
+                <li>Si le message "Windows protected your PC" apparaît :</li>
+                <ul style="padding-left:20px;">
+                    <li>Cliquez sur <strong>"More info"</strong> (Plus d'infos)</li>
+                    <li>Puis cliquez sur <strong>"Run anyway"</strong> (Exécuter quand même)</li>
+                </ul>
+            </ol>
+
+            <div style="background:#0a0a0a; padding:15px; border-radius:6px; margin-top:15px;">
+                <code style="color:#00ff41; font-size:14px;">
+                    CRYNYX > crypt document.txt<br/>
+                    ✅ document.txt → document.txt.enc (successfully encrypted!)
+                </code>
+            </div>
+
+            <p style="color:#ff4444; margin-top:15px; font-size:14px;">
+                <strong>Transparence :</strong> Si vous préférez, vous pouvez compiler vous-même le code source depuis <a href="https://github.com/gabin547/CRYNYX" style="color:#00ff41;">GitHub</a>.
+            </p>
         </div>
 
         <div class="install-steps">
             <h2>Guide d'installation</h2>
             <ol>
-                <li>Téléchargez l'exécutable.</li>
-                <li>Placez-le dans le dossier de votre choix.</li>
-                <li>Ouvrez l'invite de commandes (cmd) ou PowerShell.</li>
-                <li>Exécutez la commande :</li>
+                <li>Téléchargez <strong>crynyx.zip</strong> ci-dessus</li>
+                <li>Extrayez <strong>crynyx.exe</strong> du dossier zip</li>
+                <li>Placez-le dans le dossier de votre choix</li>
+                <li>Ouvrez l'invite de commandes (cmd) ou PowerShell</li>
+                <li>Exécutez :</li>
             </ol>
             <code>crynyx.exe</code>
             <p style="margin-top:15px; font-size:15px; color:#666;">
@@ -52,8 +89,11 @@
             </p>
         </div>
 
-        <div class="warning-box">
-            <p><strong>Note :</strong> CRYNYX est fourni en l'état. L'utilisateur est seul responsable de l'utilisation qu'il en fait. Ne partagez jamais vos fichiers .enc sans leur clé.</p>
+        <div class="legal-footer">
+            <p style="font-size:14px; color:#444;">
+                CRYNYX est un logiciel libre, distribué sous licence MIT.
+                Aucune collecte de données. Aucune connexion internet.
+            </p>
         </div>
     </main>
 
