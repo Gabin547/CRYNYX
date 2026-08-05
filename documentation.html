@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Documentation - CRYNYX</title>
+    <link rel="stylesheet" href="style/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+    <header>
+        <nav class="nav-bar">
+            <div class="logo">CRYNYX</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="documentation.html" class="active">Documentation</a></li>
+                <li><a href="download.html">Télécharger</a></li>
+                <li><a href="legales.html">Légal</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Documentation</h1>
+        <p>Guide d'utilisation des commandes CRYNYX sous Windows.</p>
+
+        <h2>Commandes disponibles</h2>
+
+        <div class="docs-grid">
+
+            <div class="doc-section">
+                <h3>crypt</h3>
+                <p>Chiffre un fichier avec une clé XOR.</p>
+                <code>crypt &lt;fichier&gt; [-key &lt;mot_de_passe&gt;]</code>
+                <ul>
+                    <li><strong>fichier</strong> : nom du fichier à chiffrer</li>
+                    <li><strong>-key</strong> : (optionnel) clé de chiffrement. Si absente, une saisie masquée est demandée.</li>
+                </ul>
+                <p class="example">Exemple :</p>
+                <code class="example-code">crypt document.txt -key 1234</code>
+            </div>
+
+            <div class="doc-section">
+                <h3>decrypt</h3>
+                <p>Déchiffre un fichier .enc.</p>
+                <code>decrypt &lt;fichier.enc&gt; [-key &lt;mot_de_passe&gt;]</code>
+                <ul>
+                    <li><strong>fichier.enc</strong> : fichier chiffré</li>
+                    <li><strong>-key</strong> : (optionnel) clé de déchiffrement. Si absente, une saisie masquée est demandée.</li>
+                </ul>
+                <p class="example">Exemple :</p>
+                <code class="example-code">decrypt document.txt.enc -key 1234</code>
+            </div>
+
+            <div class="doc-section">
+                <h3>cd</h3>
+                <p>Change le répertoire courant.</p>
+                <code>cd &lt;chemin&gt;</code>
+                <p class="example">Exemple :</p>
+                <code class="example-code">cd C:\Users\Public\Documents</code>
+            </div>
+
+            <div class="doc-section">
+                <h3>pwd</h3>
+                <p>Affiche le chemin du répertoire courant.</p>
+                <code>pwd</code>
+            </div>
+
+            <div class="doc-section">
+                <h3>help</h3>
+                <p>Affiche la liste des commandes disponibles.</p>
+                <code>help</code>
+            </div>
+
+            <div class="doc-section">
+                <h3>crynyx --version</h3>
+                <p>Affiche la version de CRYNYX.</p>
+                <code>crynyx --version</code>
+            </div>
+
+        </div>
+
+        <h2>Fonctionnement du chiffrement</h2>
+        <p>
+            CRYNYX utilise un chiffrement XOR symétrique. La même clé est utilisée pour chiffrer et déchiffrer.
+        </p>
+        <ul>
+            <li><strong>Avantage :</strong> simplicité, rapidité, aucun fichier intermédiaire.</li>
+            <li><strong>Limite :</strong> le XOR est un chiffrement faible. À réserver à un usage personnel.</li>
+        </ul>
+
+        <div class="note-box">
+            <p>Conseil : utilisez une clé d'au moins 16 caractères pour renforcer la sécurité.</p>
+        </div>
+
+        <h2>Types de fichiers supportés</h2>
+        <p>
+            CRYNYX lit et écrit en mode binaire. Il peut donc chiffrer tout type de fichier :
+        </p>
+        <ul>
+            <li>Textes (.txt, .csv, .log)</li>
+            <li>Images (.png, .jpg, .bmp, .gif)</li>
+            <li>Documents (.pdf, .docx, .xlsx, .odt)</li>
+            <li>Archives (.zip, .rar, .7z)</li>
+            <li>Exécutables et autres fichiers binaires</li>
+        </ul>
+
+        <h2>Saisie des clés sans affichage</h2>
+        <p>
+            Si vous ne passez pas la clé avec l'option <code>-key</code>, CRYNYX vous la demande de manière masquée (les caractères sont remplacés par des <code>*</code>).
+        </p>
+
+        <div class="warning-box">
+            <p><strong>Important :</strong> les fichiers .enc contiennent le résultat du XOR avec votre clé. Conservez votre clé précieusement, elle est nécessaire pour déchiffrer.</p>
+        </div>
+
+        <h2>Historique des commandes</h2>
+        <p>
+            CRYNYX conserve un historique des commandes saisies pendant la session. Il n'y a pas encore de persistance entre les sessions sous Windows.
+        </p>
+
+    </main>
+
+    <footer>
+        <p>2026 CRYNYX · Open Source · <a href="legales.html">Mentions légales</a></p>
+    </footer>
+
+</body>
+</html>
