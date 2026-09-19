@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRYNYX - Shell sécurisé</title>
+    <link rel="stylesheet" href="style/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+    <header>
+        <nav class="nav-bar">
+            <div class="logo">CRYNYX</div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Accueil</a></li>
+                <li><a href="documentation.html">Documentation</a></li>
+                <li><a href="download.html">Télécharger</a></li>
+                <li><a href="legales.html">Légal</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>CRYNYX</h1>
+            <p class="subtitle">Un shell léger pour chiffrer vos fichiers</p>
+            <p class="tagline">Chiffrement XOR - Open Source - Multiplateforme</p>
+
+            <div class="btn-group">
+                <a href="download.html" class="btn btn-primary">Télécharger</a>
+                <a href="documentation.html" class="btn btn-secondary">Documentation</a>
+            </div>
+
+            <div class="terminal-demo">
+                <div><span class="prompt">CRYNYX ></span> crypt document.txt -key 1234</div>
+                <div class="output-success">document.txt → document.txt.enc (successfully encrypted)</div>
+                <br />
+                <div><span class="prompt">CRYNYX ></span> decrypt document.txt.enc -key 1234</div>
+                <div class="output-success">document.txt.enc → document.txt (successfully decrypted)</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Pourquoi CRYNYX ?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="icon">XOR</span>
+                    <h3>Chiffrement symétrique</h3>
+                    <p>Chiffrez et déchiffrez vos fichiers avec une clé personnalisée ou par défaut.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="icon">BIN</span>
+                    <h3>Lecture binaire</h3>
+                    <p>CRYNYX traite tous les types de fichiers : textes, images, PDF, archives, etc.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="icon">C</span>
+                    <h3>Écrit en C</h3>
+                    <p>Léger, rapide, sans dépendances lourdes. Un exécutable unique.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="icon">OS</span>
+                    <h3>Linux et Windows</h3>
+                    <p>Disponible pour Linux, WSL et Windows (exécutable .exe inclus).</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>2026 CRYNYX · Open Source · <a href="legales.html">Mentions légales</a></p>
+    </footer>
+
+</body>
+</html>
